@@ -77,6 +77,7 @@ public class UserService {
         userRepository.deleteById(userId);
     }
 
+//    @PreAuthorize("hashAuthority('APPROVE_POST')")
     @PreAuthorize("hasRole('ADMIN')")
     public List<UserResponse> getUsers() {
         log.info("In method get Users");
